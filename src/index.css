@@ -1,0 +1,176 @@
+:root{
+  --family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  --main-color: #1abc9c;
+  --second-color: #1c3e50;
+  --third-color: #2c3e50;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.navbar-expand-lg{
+  background-color: var(--second-color);
+}
+.navbar-expand-lg a{
+  font-family: var(--family);
+  margin: 0 8px;
+}
+
+
+/* ===========================     Home    ======================================== */
+.home{
+  width: 100%;
+  padding: 80px 0;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+}
+.home img{
+  margin-bottom: 30px;
+}
+.heading,.portof{
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.heading::before,
+.portof::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heading::before{
+  background-color: white;
+}
+.portof::before{
+  background-color: var(--third-color);
+}
+.heading::after,
+.portof::after{
+  content: "\f005";
+  font-family: "Font Awesome 6 Free";
+  bottom: -25.6px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.heading::after{
+  background-color: var(--main-color);
+}
+.portof::after{
+  background-color: white;
+}
+.home p{
+  margin: 25px 0;
+}
+@media (max-width: 575px){
+  .heading,.portof{
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+/* ===========================     Info    ======================================== */
+.info{
+  width: 100%;
+  padding: 80px 0;
+  background-color: var(--third-color);
+  color: white;
+  text-align: center;
+}
+.info .icons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.info .icons i{
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+/* ===========================     Footer    ======================================== */
+.footer{
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  background-color: var(--second-color);
+}
+/* ==================================    About    ========================================= */
+.about{
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 100px 0;
+  color: white;
+}
+/* ==================================    Contact    ========================================= */
+.contact{
+  padding: 80px 0;
+}
+.contact form input{
+  border: 0px;
+  border-bottom: 2px solid #eee;
+}
+.contact form .btn{
+  background-color: var(--main-color);
+}
+/* ==================================    Portfolio    ========================================= */
+.portfolio{
+  padding: 80px 0;
+}
+.portfolio .container .col-md-4 .img{
+  position: relative;
+  width: 95%;
+  transition: .4s;
+  border-radius: 10px;
+
+}
+.portfolio .container .col-md-4 .img img{
+  border-radius: 10px;
+}
+.portfolio .container .col-md-4 .img i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+}
+.portfolio .container .col-md-4 .img:hover{
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+.portfolio .container .col-md-4 .img:hover img{
+  opacity: 0.1;
+  transition: 0.4s;
+}
+.portfolio .container .col-md-4 .img:hover i{
+  opacity: 1;
+  transition: 0.4s;
+}
+/* ================== New Div ===================================== */
+.new{
+  position: fixed;
+  left: 0;
+  top: 0;
+}
